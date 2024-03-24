@@ -46,7 +46,7 @@ function TodoList({ todoData }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSuccess(false);
-    }, 2500);
+    }, 3000);
     return () => clearTimeout(timer);
   }, [showSuccess]);
 
@@ -123,8 +123,8 @@ function TodoList({ todoData }) {
       <Player
         autoplay
         loop
-        src='party.json'
-        className={`absolute top-[200px] left-[400px] h-[300px] ${!showSuccess ? 'hidden' : ''} `}>
+        src='done.json'
+        className={`absolute top-[200px] left-[500px] h-[300px] ${!showSuccess ? 'hidden' : ''} `}>
         <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
       </Player>
     </div>
